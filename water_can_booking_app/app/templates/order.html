@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Water Can</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            max-width: 400px; /* Set a fixed max width */
+            margin: auto; /* Center align */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Book a Water Can</h2>
+
+        <div class="form-container">
+            <form action="/order" method="POST" class="p-4 border rounded">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Select Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" min="1" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Delivery Address:</label>
+                    <textarea id="address" name="address" class="form-control" required></textarea>
+                </div>
+
+                
+
+                <button type="submit" class="btn btn-primary w-100">Confirm Order</button>
+            </form>
+
+            <a href="/dashboard" class="btn btn-secondary mt-3 w-100">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Water Can</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Book a Water Can</h2>
+
+        <div class="form-container">
+            <form action="/order" method="POST" class="p-4 border rounded">
+                
+                <!-- Price Display -->
+                <p class="text-center"><strong>Price per can: ₹<span id="pricePerCan">50</span></strong></p>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Delivery Address:</label>
+                    <textarea id="address" name="address" class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Select Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" min="1" value="1" required oninput="updateTotal()">
+                </div>
+
+                <!-- Total Price Display -->
+                <p class="text-center"><strong>Total Price: ₹<span id="totalPrice">50</span></strong></p>
+
+                <button type="submit" class="btn btn-primary w-100">Confirm Order</button>
+            </form>
+
+            <a href="/dashboard" class="btn btn-secondary mt-3 w-100">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script>
+        function updateTotal() {
+            let pricePerCan = 50; // Price per can
+            let quantity = document.getElementById("quantity").value;
+            let total = quantity * pricePerCan;
+            document.getElementById("totalPrice").textContent = total;
+        }
+    </script>
+</body>
+</html>

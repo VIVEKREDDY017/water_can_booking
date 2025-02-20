@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto 60px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* p{
+    margin: 10px 0 0;
+} */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width:95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* dashboard.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Change to column to stack sidebar at the top */
+    /* min-height: 100vh; */
+}
+
+.sidebar {
+    /* width: 100%;  */
+    background-color: #2f4050;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    margin: 0 10px;
+    background-color: #3b4c63;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar ul li:hover {
+    background-color: #1e2a37;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    margin-top: 20px; /* Add margin to space the content from the top */
+}
+
+.content h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content .user-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content .user-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content .user-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f4050;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the text color same as parent */
+}
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar a:hover {
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+
+.sidebar ul li {
+    font-size: 14px;  /* Adjust the size as needed */
+    padding: 5px 0;
+}
